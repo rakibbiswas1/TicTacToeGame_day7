@@ -73,4 +73,22 @@ public class TicTacToeGame {
         }
         showBoard(board);
     }
+    private static void checkFreeSpace(char[] board) {
+        boolean freeSpace=false;
+        for(int index=0;index<board.length;index++)
+        {
+            if(board[index] == ' ')
+            {
+                freeSpace=true;
+            }
+        }
+        if(freeSpace == true)
+        {
+            System.out.println("Free space is available for the next move");
+        }
+        else
+        {
+            System.out.println("Free space is not available, Board is full");
+        }
+    }
 }
